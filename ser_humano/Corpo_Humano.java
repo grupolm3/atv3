@@ -10,9 +10,10 @@ package ser_humano;
  * @author alunocmc
  */
 public class Corpo_Humano {
-    public float massa;
-    private float densidade;
-    private float volume;
+    public double massa;
+    private double densidade;
+    private double volume;
+    private double altura;
     
     public Corpo_Humano(){
     }
@@ -23,25 +24,37 @@ public class Corpo_Humano {
         densidade = massa/volume;
     }
 
-    public float getMassa() {
+    public double getMassa() {
         return massa;
     }
 
-    public void setMassa(float massa) {
+    public void setMassa(double massa) {
         this.massa = massa;
         densidade = massa/volume;
     }
 
-    public float getDensidade() {
+    public double getDensidade() {
         return densidade;
     }
 
-    public float getVolume() {
+    public double getVolume() {
         return volume;
     }
 
     private void setVolume(float volume) {
         this.volume = volume;
         densidade = massa/volume;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+    
+    public double calcIMC() {
+        return getMassa() / (getAltura()*2);
     }
 }

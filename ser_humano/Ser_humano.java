@@ -19,9 +19,16 @@ public class Ser_humano {
         
         c1.setMassa(2);
         c1.massa = 2;
-        c1.setVolume(10);
-        System.out.println(c1.getDensidade());
+        //c1.setVolume(10);
         
+        
+        
+       //??System.out.println(c1.getDensidade());
+        
+        c1.setAltura(1.8);
+        c1.setMassa(92.5);
+        
+        System.out.printf("%.2f%n", c1.calcIMC());
         
         // 1 - Ao tentar setar o valor c1.massa igual a 2 ele gera um erro pois o atributo está como private
         
